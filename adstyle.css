@@ -18,6 +18,32 @@ footer {
     width: 100%;
 }
 
+.bottom-right-image {
+    position: fixed;
+    right: 10px;
+    width: 450px;
+    bottom: -50px;
+    height: auto;
+}
+
+.bottom-right-image img {
+    width: 100%;
+    height: auto;
+}
+
+.top-right-image {
+    position: fixed;
+    right: -130px;
+    width: 700px;
+    top: 10px;
+    height: auto;
+}
+
+.top-right-image img {
+    width: 100%;
+    height: auto;
+}
+
 footer img {
     width: 50px;
     height: 50px;
