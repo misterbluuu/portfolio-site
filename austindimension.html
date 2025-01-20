@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin Dimension</title>
+    <link rel="stylesheet" href="adstyle.css">
+</head>
+<body>
+
+<!-- Desktop Code-->
+    <div class="desktop">
+        <div class="icon" style="top: 20px; left: 20px;" onclick="openFileExplorer()">
+            <img src="https://img.icons8.com/ios/50/000000/document.png" alt="Documents">
+            <div>Documents</div>
+        </div>
+        <div class="icon" style="top: 120px; left: 20px;" onclick="openFriends()">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/folder-invoices.png" alt="friends">
+            <div>Friends</div>
+        </div>
+        <div class="icon" style="top: 220px; left: 20px;" onclick="openGallery()">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/folder-invoices.png" alt="gallery">
+            <div>Gallery</div>
+        </div>
+        <div class="icon" style="top: 320px; left: 20px;" onclick="openPhotos()">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/folder-invoices.png" alt="photos">
+            <div>Photos</div>
+        </div>
+
+<!-- Documents Code-->
+        <div class="file-explorer" id="fileExplorer" style="display: none;">
+            <div class="file-explorer-header">
+                <span>Documents</span>
+                <button onclick="closeFileExplorer('fileExplorer')">X</button>
+            </div>
+            <div class="file-explorer-content">
+                <div class="folder" onclick="openFolder('2024')">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/folder-invoices.png" alt="2024">
+                    <div>2024</div>
+                </div>
+                <div class="folder" onclick="openFolder('2019')">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/folder-invoices.png" alt="2019">
+                    <div>2019</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="file-explorer" id="folder2024" style="display: none;">
+            <div class="file-explorer-header">
+                <span>2024</span>
+                <button onclick="closeFileExplorer('folder2024')">X</button>
+            </div>
+            <div class="file-explorer-content">
+                <div class="document" onclick="showDocument('J')">
+                    <img src="https://img.icons8.com/ios/50/000000/document.png" alt="J">
+                    <div>J</div>
+                </div>
+                <div class="document" onclick="showDocument('80HD (abridged)')">
+                    <img src="https://img.icons8.com/ios/50/000000/document.png" alt="80HD (abridged)">
+                    <div>80HD (abridged)</div>
+                </div>
+                <div class="document" onclick="showDocument('entropy')">
+                    <img src="https://img.icons8.com/ios/50/000000/document.png" alt="entropy">
+                    <div>entropy</div>
+                </div>
+                <div class="document" onclick="showDocument('on friendship (abridged)')">
+                    <img src="https://img.icons8.com/ios/50/000000/document.png" alt="on friendship (abridged)">
+                    <div>on friendship (abridged)</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="file-explorer" id="folder2019" style="display: none;">
+            <div class="file-explorer-header">
+                <span>2019</span>
+                <button onclick="closeFileExplorer('folder2019')">X</button>
+            </div>
+            <div class="file-explorer-content">
+                <div class="document" onclick="showDocument('on conversations')">
+                    <img src="https://img.icons8.com/ios/50/000000/document.png" alt="on conversations">
+                    <div>on conversations</div>
+                </div>
+                <div class="document" onclick="showDocument('invisible box')">
+                    <img src="https://img.icons8.com/ios/50/000000/document.png" alt="80HD (invisible box)">
+                    <div>invisible box</div>
+                </div>
+                <div class="document" onclick="showDocument('perception')">
+                    <img src="https://img.icons8.com/ios/50/000000/document.png" alt="perception">
+                    <div>perception</div>
+                </div>
+                <div class="document" onclick="showDocument('camera')">
+                    <img src="https://img.icons8.com/ios/50/000000/document.png" alt="camera">
+                    <div>camera</div>
+                </div>
+                <div class="document" onclick="showDocument('boy (abridged)')">
+                    <img src="https://img.icons8.com/ios/50/000000/document.png" alt="boy (abridged)">
+                    <div>boy (abridged)</div>
+                </div>
+                <div class="document" onclick="showDocument('sister')">
+                    <img src="https://img.icons8.com/ios/50/000000/document.png" alt="sister">
+                    <div>sister</div>
+                </div>
+                <div class="document" onclick="showDocument('one sided')">
+                    <img src="https://img.icons8.com/ios/50/000000/document.png" alt="one sided">
+                    <div>one sided</div>
+                </div>
+                <div class="document" onclick="showDocument('one sided ii')">
+                    <img src="https://img.icons8.com/ios/50/000000/document.png" alt="one sided ii">
+                    <div>one sided ii</div>
+                </div>
+                <div class="document" onclick="showDocument('cyanide')">
+                    <img src="https://img.icons8.com/ios/50/000000/document.png" alt="cyanide">
+                    <div>cyanide</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="document-viewer" id="documentViewer">
+            <div class="document-viewer-header">
+                <span id="documentTitle"></span>
+                <button onclick="closeDocumentViewer()">X</button>
+            </div>
+            <div class="document-viewer-content" id="documentContent"></div>
+        </div>
+    </div>
+
+
+<!-- Friends Code-->
+
+        <div class="friends" id="friends" style="display: none;">
+            <div class="friends-header">
+                <span>Friends</span>
+                <button onclick="closeFileExplorer('friends')">X</button>
+            </div>
+            <div class="friends-content">
+                <div class="folder" onclick="openFolder('mock trial')">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/folder-invoices.png" alt="mock trial">
+                    <div>mock trial</div>
+                </div>
+                <div class="folder" onclick="openFolder('serber')">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/folder-invoices.png" alt="serber">
+                    <div>serber</div>
+                </div>
+                <div class="folder" onclick="openFolder('paint club')">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/folder-invoices.png" alt="paint club">
+                    <div>paint club</div>
+                </div>
+                <div class="folder" onclick="openFolder('penn state')">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/folder-invoices.png" alt="penn state">
+                    <div>penn state</div>
+                </div>
+            </div>
+        </div>
+
+<!-- Gallery Code-->
+<div class="gallery" id="gallery" style="display: none;">
+    <div class="gallery-header">
+        <span>Gallery</span>
+        <button onclick="closeFileExplorer('gallery')">X</button>
+    </div>
+    <div class="gallery-content">
+        <div class="folder" onclick="openFolder('paintings')">
+            <img src="https://img.icons8.com/ios-filled/50/000000/folder-invoices.png" alt="paintings">
+            <div>paintings</div>
+        </div>
+    </div>
+</div>
+
+<!-- Photos Code-->
+<div class="photos" id="photos" style="display: none;">
+    <div class="photos-header">
+        <span>Photos</span>
+        <button onclick="closeFileExplorer('photos')">X</button>
+    </div>
+    <div class="photos-content">
+        <div class="folder" onclick="openFolder('baby blu')">
+            <img src="https://img.icons8.com/ios-filled/50/000000/folder-invoices.png" alt="baby blu">
+            <div>baby blu</div>
+        </div>
+    </div>
+</div>       
+
+<!-- Taskbar Code-->
+    <footer>
+        <button onclick="location.href='index.html'"> <img src="home.png"></button> 
+    </footer>
+    <script src="admain.js"></script>
+</body>
+</html>
