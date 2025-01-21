@@ -24,7 +24,6 @@ footer {
     color: #ddd;
     text-align: center;
     padding: 0.5rem 0;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -70,6 +69,26 @@ button:hover {
     display: inline-block;
     white-space: nowrap;
     animation: scrollBanner 20s linear infinite;
+}
+
+.intro-paragraph {
+    background-position: center;
+    top: 200px;
+    width: 90%;
+    background: rgb(113, 133, 185);
+    color:rgb(31, 17, 57);
+    padding: 10px;
+
+}
+
+.contact-info {
+        background-position: center;
+        top: 300px;
+        width: 40%;
+        background: rgb(105, 106, 196);
+        color:rgb(255, 255, 255);
+        padding: 10px;
+        text-align: center;
 }
 
 @keyframes scrollBanner {
