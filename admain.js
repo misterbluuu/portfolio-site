@@ -2,7 +2,26 @@ const fileExplorer = document.getElementById('fileExplorer');
 const friends = document.getElementById('friends'); 
 const gallery= document.getElementById('gallery'); 
 const photos = document.getElementById('photos'); 
+const image = document.getElementById('image');
+const read = document.getElementById('read');
 let check; 
+let isOriginal = true;
+
+//OUTFIT CODE
+
+ function toggleImage() {
+        image.style.display = 'block';
+
+            if (isOriginal) {
+                image.src = "me2.png";
+            } else {
+                image.src = "me.png";
+            }
+
+            isOriginal = !isOriginal;
+        }
+
+// GENERAL FOLDER CODE
 
 function openFileExplorer() {
     fileExplorer.style.display = 'block';
@@ -24,6 +43,18 @@ function openPhotos() {
     check = '.photos'; 
 }
 
+function openRead() {
+
+        check = '.read'; 
+        const readContent = document.getElementById('readContent');
+
+        let readcontent = '<p>Welcome to the Austin Dimension!</p> <p> Current Projects:<br> (DONE) Documents: poetry(?) from highschool and also recently. done until i feel inclined to write more :) <br> (WIP) Friends: cameos of those closest to me <3 <br> (WIP) Gallery: anything that is traditional/digital one-off art <br> (WIP) Photos: pictures I took or I think are funny <br> (DONE) Switch Look: just click the button, trust. will add more when i draw more <br> ';
+
+
+        readContent.innerHTML = readcontent;
+        read.style.display = 'block';
+    }
+
 let offsetX = 0, offsetY = 0;
 
 function openFolder(folderId) {
@@ -34,6 +65,8 @@ function openFolder(folderId) {
 function closeFileExplorer(explorerId) {
     document.getElementById(explorerId).style.display = 'none';
 }
+
+// DOCUMENT CODE
 
         function showDocument(documentTitle) {
     const documentViewer = document.getElementById('documentViewer');

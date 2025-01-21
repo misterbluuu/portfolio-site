@@ -9,26 +9,35 @@
 <body>
 
 <!-- Desktop Code-->
+
     <div class="desktop">
         <div class="icon" style="top: 20px; left: 20px;" onclick="openFileExplorer()">
-            <img src="https://img.icons8.com/ios/50/000000/document.png" alt="Documents">
+            <img src="documents.png" alt="Documents">
             <div>Documents</div>
         </div>
-        <div class="icon" style="top: 120px; left: 20px;" onclick="openFriends()">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/folder-invoices.png" alt="friends">
+        <div class="icon" style="top: 130px; left: 20px;" onclick="openFriends()">
+            <img src="friends.png" alt="friends">
             <div>Friends</div>
         </div>
         <div class="icon" style="top: 220px; left: 20px;" onclick="openGallery()">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/folder-invoices.png" alt="gallery">
+            <img src="gallery.png" alt="gallery">
             <div>Gallery</div>
         </div>
         <div class="icon" style="top: 320px; left: 20px;" onclick="openPhotos()">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/folder-invoices.png" alt="photos">
+            <img src="photos.png" alt="photos">
             <div>Photos</div>
+        </div>
+        <div class="icon" style="top: 560px; left: 1000px;" onclick="toggleImage()">
+            <img src="outfit.png" alt="image">
+            <div>Switch Look</div>
+        </div>
+        <div class="icon" style="top: 20px; left: 800px;" onclick="openRead()">
+            <img src="readme.png" alt="readme">
+            <div>START HERE!!!</div>
         </div>
 
         <div class="bottom-right-image">
-            <img src="me.png" alt="bottom-right picture">
+            <img id="image" src="me.png" alt="bottom-right picture">
         </div>
 
         <div class="top-right-image">
@@ -186,7 +195,18 @@
             <div>baby blu</div>
         </div>
     </div>
-</div>       
+</div>  
+
+<!-- ReadMe Code-->
+<div class="read" id="read" style="display: none;">
+    <div class="read-header">
+        <span>A Brief History of the Austin Dimension</span>
+        <button onclick="closeFileExplorer('read')">X</button>
+    </div>
+    <div class="read-content" id="readContent"></div> 
+    </div>
+    
+</div>
 
 <!-- Taskbar Code-->
     <footer>
