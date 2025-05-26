@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <button class="rgb-button" id="toggleTheme" onclick="location.href='austindimension.html'">Creative Portfolio</button>
+    <script src="main.js"></script>
+
+    <!-- Desktop Code-->
+
+    <div class="desktop">
+        <div class="icon" style="top: 20px; left: 20px;" onclick="openFileExplorer()">
+            <img src="documents.png" alt="Documents">
+            <div>AGResume25.pdf</div>
+        <div class="icon" style="top: 20px; left: 800px;" onclick="openRead()">
+            <img src="readme.png" alt="readme">
+            <div>START HERE!!!</div>
+        </div>
+
+<!-- ReadMe Code-->
+<div class="read" id="read" style="display: none;">
+    <div class="read-header">
+        <span>A Brief History of the Austin Dimension</span>
+        <button onclick="closeFileExplorer('read')">X</button>
+    </div>
+    <div class="read-content" id="readContent"></div> 
+    </div>
+    
+</div>
+
+<!-- Taskbar Code-->
+    <footer>
+        <button onclick="location.href='index.html'"> <img src="home.png"></button> 
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
