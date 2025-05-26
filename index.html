@@ -5,41 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Austin's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <div class="banner">
-        <span class="banner-text">Under Construction &nbsp; | &nbsp; Under Construction &nbsp; | &nbsp; Under Construction &nbsp; | &nbsp; Under Construction &nbsp; | &nbsp; Under Construction &nbsp; | &nbsp; Under Construction &nbsp; | &nbsp; Under Construction &nbsp; | &nbsp; Under Construction &nbsp; | &nbsp; Under Construction</span>
-    </div>
-</head>
 <body>
     <button class="rgb-button" id="toggleTheme" onclick="location.href='austindimension.html'">Creative Portfolio</button>
-    <header>
-        <h1>Austin's Portfolio</h1>
-        <h2>
-        <button onclick="location.href='index.html'">Home</button>
-        <button onclick="location.href='about.html'">About Me</button>
-        <button onclick="location.href='resume.html'">Resume</button>
-        <button onclick="location.href='showcase.html'">Showcase</button>
-        <button onclick="location.href='projects.html'">Projects</button>
-        </h2>
-    </header>
+    <script src="main.js"></script>
+
+    <!-- Desktop Code-->
+
+    <div class="desktop">
+        <div class="icon" style="top: 20px; left: 20px;" onclick="openFileExplorer()">
+            <img src="documents.png" alt="Documents">
+            <div>AGResume25.pdf</div>
+        <div class="icon" style="top: 20px; left: 800px;" onclick="openRead()">
+            <img src="readme.png" alt="readme">
+            <div>START HERE!!!</div>
+        </div>
+
+<!-- ReadMe Code-->
+<div class="read" id="read" style="display: none;">
+    <div class="read-header">
+        <span>A Brief History of the Austin Dimension</span>
+        <button onclick="closeFileExplorer('read')">X</button>
+    </div>
+    <div class="read-content" id="readContent"></div> 
+    </div>
     
-    <main>
-        <div class="intro-paragraph">
-        <p><b>Hello!</b></p>
-        <p>
-            My name is Austin Giordano, and I am currently a senior studying mechanical engineering at the Pennsylvania State University.
-I'm set to graduate in May of 2025, and look forward to what the future will bring! This website serves as my professional portfolio for anything
-engineering related (I also have a creative portfolio that can be accessed via the button in the top left corner! I am currently using it to learn how to actually build a website, so it has more experimental features on it). I have never done web development before, so I apologize for any bugs that you may run into while exploring my site! I hope that you
-find this portfolio valuable in getting to know more about me and my skills.
-        </p>
-    </div>
-    <div class="contact-info">
-        <p><u><b> My contact information</b></u></p>
-        <p> Phone Number: +1 (717)-688-5976</p>
-        <p> Email: austgiordano@gmail.com</p>
-    </div>
-    </main>
+</div>
+
+<!-- Taskbar Code-->
     <footer>
-        <p>&copy; 2025</p>
+        <button onclick="location.href='index.html'"> <img src="home.png"></button> 
     </footer>
     <script src="main.js"></script>
 </body>
